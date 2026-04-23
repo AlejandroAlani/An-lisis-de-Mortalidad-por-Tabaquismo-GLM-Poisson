@@ -7,20 +7,22 @@ El análisis cubre desde la exploración visual de los datos hasta el diagnósti
 
 Dataset
 Archivo de texto con cuatro variables:
-VariableDescripción. "age": Grupo etario, "status":Status de fumador (fumador / no fumador), "population":Tamaño de la subpoblación. "death":Número de muertes observadas
+"age": Grupo etario, "status":Status de fumador (fumador / no fumador), "population":Tamaño de la subpoblación. "death":Número de muertes observadas
 
 Metodología
-1. Exploración visual
-Gráficos de dispersión entre edad, población, status y muertes (escala logarítmica)
+1. Exploración visual:
+Gráficos de dispersión entre edad, población, status y muertes (escala logarítmica).
 Identificación de patrones y valores atípicos
 
-2. Modelos ajustados
+2. Modelos ajustados:
+   
 Modelo 1 — Efecto de la edad sobre las muertes:
 rglm(death ~ age, family = poisson(link = "log"))
 Modelo 2 — Efecto combinado de edad, status y población:
 rglm(death ~ age + status + population, family = poisson(link = "log"))
 
 3. Diagnóstico
+
 Análisis de residuos vs valores ajustados
 Evaluación del ajuste mediante summary() y deviance
 
