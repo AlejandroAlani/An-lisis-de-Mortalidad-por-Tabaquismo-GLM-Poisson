@@ -26,7 +26,7 @@ rglm(death ~ age + status + population, family = poisson(link = "log"))
 Análisis de residuos vs valores ajustados
 Evaluación del ajuste mediante summary() y deviance
 
-Resultados clave
+Resultados claves:
 La edad y el status del fumador son predictores significativos de la mortalidad.
 El modelo con multiple covariables mejorar el ajuste respecto al modelo lineal
 Los coeficientes con escala logaritmica permiten estudiar el Rate Radio mediante exp(coef())
